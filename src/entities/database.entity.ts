@@ -1,20 +1,4 @@
-// import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { Entity, Column, PrimaryGeneratedColumn, TableForeignKey, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
-
-// @Entity('SubscriptionTypes')
-// export class SubscriptionEntity{
-//     @PrimaryGeneratedColumn()
-//     id: number
-
-//     @Column()
-//     name: string;
-
-//     @Column('text')
-//     description: string;
-
-//     @Column()
-//     paymentprice: number
-// }
 
 @Entity()
 export class SubscriptionType {
@@ -76,8 +60,11 @@ export class Show {
   @Column()
   title: string;
 
-  @Column()
-  imdbRating: number;
+  // @Column()
+  // imdbRating: number;
+
+  @Column('numeric', { precision: 5, scale: 1 })
+  imdbRating: string;
 
   @Column()
   description: string;
