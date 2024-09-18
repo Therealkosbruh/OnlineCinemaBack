@@ -3,6 +3,7 @@ import { UserService } from '../services/user.service';
 import { User } from '../entities/database.entity';
 import * as jwt from 'jsonwebtoken';
 
+
 @Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
